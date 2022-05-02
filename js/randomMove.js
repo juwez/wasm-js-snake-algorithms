@@ -7,14 +7,13 @@ const ROWS = 25;
 const COLS = 25;
 const BLOCK_W = Math.floor(width / COLS);
 const BLOCK_H = Math.floor(height / ROWS);
-let size = ROWS;
+const size = ROWS;
 let score=0
 
 let snake;
 const startXSnake = Math.floor(ROWS / 2);
 const startYSnake = Math.floor(COLS / 2);
 
-let direction;
 let snakeAlive=false;
 let foodOnBoard=false;
 
@@ -40,8 +39,8 @@ function moveSnake(){
   if(moves.length === 0)
   
   {snakeAlive = false}
-  let direction = Math.floor(Math.random() * moves.length);
-  let move = moves[direction];
+  const direction = Math.floor(Math.random() * moves.length);
+  const move = moves[direction];
 
   if(move ==='canMoveRight'){
 
@@ -136,7 +135,7 @@ function draw() {
 }
 
 function startGame() {
-    setInterval(draw, 3000);
+    setInterval(draw, 200);
   }
 
 startGame();
